@@ -10,14 +10,18 @@ h1 {
 
 ul {
     background-color: orange;
+    font-style: italic;
+    line-height: 20px;
 }
 
 p {
     font-weight: 600;
     font-size: 3em;
+    text-decoration: underline;
 }
 
 .text-background {
     background-color: olive;
     color: white;
+    text-align: center;
 }
