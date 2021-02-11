@@ -14,6 +14,10 @@ ul {
     line-height: 20px;
 }
 
+li {
+    color: black;
+}
+
 p {
     font-weight: 600;
     font-size: 3em;
@@ -24,4 +28,16 @@ p {
     background-color: olive;
     color: white;
     text-align: center;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#red {
+    background-color: red;
+}
+
+#brown {
+    background-color: brown;
 }
