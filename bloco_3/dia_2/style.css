@@ -6,3 +6,8 @@ h1 {
 ul {
     background-color: orange;
 }
+
+.text-background {
+    background-color: olive;
+    color: white;
+}
