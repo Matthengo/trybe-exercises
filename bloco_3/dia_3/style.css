@@ -12,6 +12,7 @@ a {
     width: 100px;
     padding: 20px 20px;
     margin: 0px 5px;
+    vertical-align: middle;
 }
 
 div {
