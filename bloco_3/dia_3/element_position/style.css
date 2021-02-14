@@ -1,0 +1,48 @@
+h1 {
+    text-align: center;
+}
+
+.super-mario,
+.goomba,
+.baloon,
+.bowser,
+.word {
+    position: relative;
+    display: inline-block;
+}
+
+div {
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+.super-mario {
+    width: 150px;
+    bottom: 140px;
+    left: 25%;
+}
+
+.goomba {
+    width: 100px;
+    left: 20%;
+    bottom: 30px;
+}
+
+.bowser {
+    width: 300px;
+}
+
+.baloon {
+    width: 200px;
+    vertical-align: top;
+    left: 40px;
+    z-index: 1;
+}
+
+.word {
+    vertical-align: top;
+    z-index: 2;
+    top: 30px;
+    left: 215px;
+}
