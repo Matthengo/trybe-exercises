@@ -50,4 +50,12 @@ body {
 .main-header nav ul li a {
     color: #b4b4b4;
     text-decoration: none;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.main-header nav ul li a:hover {
+    border: 1px solid #e9bc82;
+    font-weight: bold;
+    color: white;
 }
