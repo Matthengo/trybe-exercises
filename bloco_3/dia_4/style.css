@@ -3,14 +3,19 @@ body {
 }
 
 .main-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    position: relative;
     text-align: center;
     height: 500px;
     border-bottom: 2px solid #e9bc82;
     color: #b4b4b4;
     background-color: #282828;
+}
+
+.main-header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 .main-header strong {
@@ -21,4 +26,28 @@ body {
 .main-header h2 {
     margin: 0px;
     font-weight: normal;
+}
+
+.main-header nav {
+    position: absolute;
+    background-color: #121212;
+    width: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0px 0px 30px 30px;
+}
+
+.main-header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.main-header nav ul li {
+    list-style: none;
+}
+
+.main-header nav ul li a {
+    color: #b4b4b4;
+    text-decoration: none;
 }
