@@ -1,61 +1,163 @@
+html,
 body {
-    margin: 0;
+    height: 100%;
+    background-color: #e9bc82;
 }
 
-.main-header {
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.top-header {
     position: relative;
     text-align: center;
-    height: 500px;
-    border-bottom: 2px solid #e9bc82;
+    height: 100%;
     color: #b4b4b4;
     background-color: #282828;
 }
 
-.main-header div {
+.top-header section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
 }
 
-.main-header strong {
+.top-header strong {
     color: #e9bc82;
 }
 
-.main-header h1,
-.main-header h2 {
+.top-header h1,
+.top-header h2 {
     margin: 0px;
     font-weight: normal;
 }
 
-.main-header nav {
+.top-header h1 {
+    font-size: 2.7em;
+}
+
+.top-header nav {
     position: absolute;
     background-color: #121212;
     width: 600px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 0px 0px 30px 30px;
+    border-top: none;
 }
 
-.main-header nav ul {
+.top-header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding: 0px;
 }
 
-.main-header nav ul li {
+.top-header li {
     list-style: none;
+
 }
 
-.main-header nav ul li a {
+.top-header nav a {
     color: #b4b4b4;
     text-decoration: none;
     padding: 5px;
     text-transform: uppercase;
+    border: 1px solid #121212;
 }
 
-.main-header nav ul li a:hover {
+.top-header nav a:hover {
     border: 1px solid #e9bc82;
-    font-weight: bold;
     color: white;
+}
+
+.main-header {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 10px;
+    background-color: white;
+}
+
+.sci-name {
+    width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.sci-name h2 {
+    margin-top: 0px;
+    padding: 10px 0px 10px 0px;
+    border: 3px solid #505050;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.stomatopoda-tec-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin-top: 50px;
+    height: 400px;
+
+}
+
+.stomatopoda-figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    width: 500px;
+    padding: 5px;
+    margin-top: 0px;
+}
+
+.stomatopoda-figure img {
+    width: 500px;
+    height: 500px;
+}
+
+.stomatopoda-figure figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+.info-table {
+    display: flex;
+    height: auto;
+    margin-bottom: 16px;
+    justify-content: end;
+    width: auto;
+    margin-left: auto;
+}
+
+.info-table table {
+    height: 100%;
+    margin-left: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 20px solid #e9bc82;
+    border-right: 0px;
+    border-left: 40px solid #e9bc82;
+    border-radius: 20px 0px 0px 20px;
+    position: relative;
+    left: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+.info-table table span {
+    font-size: 0.7em;
+}
+
+.info-table td:first-child {
+    font-weight: bold;
+    color: #282828;
+}
+
+.info-table td {
+    padding: 15px;
 }
