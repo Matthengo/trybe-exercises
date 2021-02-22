@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 500px;
+    border-bottom: 2px solid #e9bc82;
+    color: #b4b4b4;
+    background-color: #282828;
+}
+
+.main-header strong {
+    color: #e9bc82;
+}
+
+.main-header h1,
+.main-header h2 {
+    margin: 0px;
+    font-weight: normal;
+}
