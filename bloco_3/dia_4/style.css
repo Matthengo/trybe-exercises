@@ -251,3 +251,21 @@ main .content-img img {
     width: 300px;
     height: 200px;
 }
+
+.main-footer {
+    margin: 0px 40px;
+    padding-bottom: 20px;
+}
+
+.body-footer {
+    height: 200px;
+    background-color: #282828;
+    text-align: center;
+}
+
+.body-footer p {
+    margin-top: 0px;
+    padding-top: 16px;
+    font-size: 1.5em;
+    color: #b4b4b4;
+}
