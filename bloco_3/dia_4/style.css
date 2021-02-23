@@ -180,9 +180,14 @@ main section h3 {
 }
 
 main .initial-letter {
+    display: block;
+    position: relative;
+    top: -10px;
+    height: 54px;
     float: left;
     font-size: 4em;
     color: #282828;
+
 }
 
 main .blue {
