@@ -171,7 +171,7 @@ main section div {
     display: inline-block;
 }
 
-main section div:first-child {
+main section div:nth-child(2n+1) {
     width: 60%;
 }
 
@@ -205,11 +205,44 @@ main .stomatopoda-name {
     font-weight: 600;
 }
 
-main section strong {
+main section .uppercase {
     text-transform: uppercase;
 }
 
+main section p {
+    min-height: 250px;
+}
+
+main section .content-text {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+main .content-img {
+    height: 345px;
+    text-align: center;
+    display: inline-block;
+
+}
+
+main .left {
+    float: left
+}
+
+main .right {
+    float: right
+}
+
+main .vertical-helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
 main .content-img img {
+    display: inline-block;
+    margin: 0 auto;
+    vertical-align: middle;
     width: 300px;
     height: 200px;
 }
