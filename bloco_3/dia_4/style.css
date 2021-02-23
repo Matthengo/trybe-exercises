@@ -73,10 +73,30 @@ body {
     color: white;
 }
 
-main article {
-    width: 75%;
+main {
+    text-align: center;
+}
+
+main aside {
+    display: inline-block;
+    width: 15%;
+    min-height: 500px;
     background-color: white;
-    margin: 0 auto;
+    vertical-align: top;
+    margin-top: 50px;
+    text-align: start;
+    padding: 20px;
+}
+
+main aside a {
+    text-decoration: none;
+}
+
+main article {
+    display: inline-block;
+    width: 70%;
+    background-color: white;
+    text-align: start;
 }
 
 .main-header {
@@ -147,7 +167,7 @@ main article {
     position: absolute;
     background-color: white;
     text-align: center;
-    left: calc(100% - 150px);
+    left: calc(100% - 80px);
     transform: translateX(-100%);
     top: calc(100% + 113px);
 
