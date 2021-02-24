@@ -53,3 +53,17 @@ if (numD > 0) {
 } else {
     console.log("NumD é zero");
 }
+
+console.log()
+console.log("---------------------")
+console.log("Exercício 5: ");
+
+const angA = 45
+const angB = 60
+const angC = 75
+console.log(`Ângulo A: ${angA} | Ângulo B: ${angB} | Ângulo C: ${angC}`);
+if ((angA + angB + angC) == 180) {
+    console.log("É um triângulo");
+} else {
+    console.log("Não é um triÂngulo");
+}
