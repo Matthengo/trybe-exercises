@@ -124,3 +124,19 @@ if (nota >= 90) {
 } else if (nota < 0 || nota > 100) {
     console.log(" Nota inválida");
 }
+
+console.log()
+console.log("---------------------")
+console.log("Exercício 8: ");
+
+const numE = 10;
+const numF = 11;
+const numG = 12;
+
+console.log(`Num E: ${numE} | Num F: ${numF} | Num G: ${numG}`);
+
+if ((numE % 2) == 0 || (numF % 2) == 0 || (numG % 2) == 0) {
+    console.log(true, " um deles é par");
+} else {
+    console.log(false, " nenhum deles é par");
+}
