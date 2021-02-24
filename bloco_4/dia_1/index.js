@@ -140,3 +140,15 @@ if ((numE % 2) == 0 || (numF % 2) == 0 || (numG % 2) == 0) {
 } else {
     console.log(false, " nenhum deles é par");
 }
+
+console.log()
+console.log("---------------------")
+console.log("Exercício 9: ");
+
+console.log(`Num E: ${numE} | Num F: ${numF} | Num G: ${numG}`);
+
+if (!(numE % 2) == 0 || !(numF % 2) == 0 || !(numG % 2) == 0) {
+    console.log(true, " um deles é ímpar");
+} else {
+    console.log(false, " nenhum deles é ímpar");
+}
