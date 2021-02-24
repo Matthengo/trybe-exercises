@@ -67,3 +67,36 @@ if ((angA + angB + angC) == 180) {
 } else {
     console.log("Não é um triÂngulo");
 }
+
+console.log()
+console.log("---------------------")
+console.log("Exercício 6: ");
+
+let chessPiece = "KNIGHT";
+console.log(`Chess Piece: ${chessPiece}`);
+
+chessPiece = chessPiece.toLowerCase();
+
+switch (chessPiece) {
+    case "pawn":
+        console.log("Movement: Foward");
+        break;
+    case "bishop":
+        console.log("Movement: Diagonally");
+        break;
+    case "knight":
+        console.log("Movement: L-Shape");
+        break;
+    case "rook":
+        console.log("Movement: Horizontal and Vertical");
+        break;
+    case "queen":
+        console.log("Movement: Any");
+        break;
+    case "king":
+        console.log("Movement: Around it");
+        break;
+    default:
+        console.log("Invalid");
+        break;
+}
