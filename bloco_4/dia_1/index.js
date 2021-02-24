@@ -152,3 +152,24 @@ if (!(numE % 2) == 0 || !(numF % 2) == 0 || !(numG % 2) == 0) {
 } else {
     console.log(false, " nenhum deles é ímpar");
 }
+
+console.log()
+console.log("---------------------")
+console.log("Exercício 10: ");
+
+const valCusto = 54;
+const impostoCusto = 0.2;
+const totCusto = valCusto * (1 + impostoCusto);
+
+const valVenda = 132;
+
+const qtdProdutos = 1000;
+
+const valLucro = valVenda - totCusto;
+const totLucro = valLucro * qtdProdutos;
+
+if (valCusto < 0 || valVenda < 0) {
+    console.log("Erro, valores inválidos.");
+} else {
+    console.log(`Lucro obtido: ${totLucro}`);
+}
