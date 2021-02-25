@@ -51,3 +51,17 @@ if (mediaArit > 20) {
 } else {
     console.log("Valor aritmetico menor que 20");
 }
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 5: ");
+
+let greaterNum = 0;
+
+numbers.forEach((value, index) => {
+    if (value > greaterNum) {
+        greaterNum = value;
+    }
+})
+
+console.log(`Maior número: ${greaterNum}`);
