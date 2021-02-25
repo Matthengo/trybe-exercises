@@ -14,9 +14,22 @@ for (let val of numbers) {
     console.log(val);
 }
 
-numbers.forEach((value, index) => console.log(value);)
+numbers.forEach((value, index) => console.log(value));
  */
 
 for (let val = 0; val < numbers.length; val += 1) {
     console.log(numbers[val]);
 }
+
+//Exercicios utilizando forEach, pois tem uma sintaxe mais simples.
+console.log();
+console.log("---------------------");
+console.log("Exercicio 2: ");
+
+let sum = 0;
+
+numbers.forEach((value, index) => {
+    sum += value;
+});
+
+console.log(sum);
