@@ -21,8 +21,10 @@ console.log("---------------------")
 console.log("Exercício 2: ");
 if (numA > numB) {
     console.log("NumA é maior que NumB");
-} else {
+} else if (numA < numB) {
     console.log("NumA é menor que NumB");
+} else {
+    console.log("NumA é igual ao NumB");
 }
 
 console.log()
@@ -35,8 +37,10 @@ if (numA > numB && numA > numC) {
     console.log("NumA é o maior");
 } else if (numB > numC && numB > numA) {
     console.log("NumB é o maior");
-} else {
+} else if (numC > numA && numC > numB) {
     console.log("NumC é o maior");
+} else {
+    console.log("Existem números iguais");
 }
 
 console.log()
@@ -103,13 +107,15 @@ switch (chessPiece) {
 
 console.log()
 console.log("---------------------")
-console.log("Exercício 7: ");
+console.log("Exercício 7: "); //TODO: Arrumar
 
 const nota = 75;
 
 console.log(`Nota: ${nota}`);
 
-if (nota >= 90) {
+if (nota < 0 || nota > 100) {
+    console.log(" Nota inválida");
+} else if (nota >= 90) {
     console.log(" = A")
 } else if (nota >= 80 && nota < 90) {
     console.log(" = B");
@@ -121,8 +127,6 @@ if (nota >= 90) {
     console.log(" = E");
 } else if (nota < 50) {
     console.log(" = F");
-} else if (nota < 0 || nota > 100) {
-    console.log(" Nota inválida");
 }
 
 console.log()
@@ -155,7 +159,7 @@ if (!(numE % 2) == 0 || !(numF % 2) == 0 || !(numG % 2) == 0) {
 
 console.log()
 console.log("---------------------")
-console.log("Exercício 10: ");
+console.log("Exercício 10: "); //TODO: Valores diferente de 0 ou menos
 
 const valCusto = 54;
 const impostoCusto = 0.2;
@@ -168,7 +172,7 @@ const qtdProdutos = 1000;
 const valLucro = valVenda - totCusto;
 const totLucro = valLucro * qtdProdutos;
 
-if (valCusto < 0 || valVenda < 0) {
+if (valCusto <= 0 || valVenda <= 0) {
     console.log("Erro, valores inválidos.");
 } else {
     console.log(`Lucro obtido: ${totLucro}`);
