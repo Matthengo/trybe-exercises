@@ -41,3 +41,13 @@ console.log("Exercicio 3: ");
 let mediaArit = sum / numbers.length;
 
 console.log(mediaArit);
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 4: ");
+
+if (mediaArit > 20) {
+    console.log("Valor aritmetico maior que 20");
+} else {
+    console.log("Valor aritmetico menor que 20");
+}
