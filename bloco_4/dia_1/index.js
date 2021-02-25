@@ -173,3 +173,82 @@ if (valCusto < 0 || valVenda < 0) {
 } else {
     console.log(`Lucro obtido: ${totLucro}`);
 }
+
+console.log()
+console.log("---------------------")
+console.log("Exercício 11: ");
+
+const salary = 3500;
+let finalValue;
+
+const INSS = {
+    firstVal: {
+        initial: 0,
+        aliq: 0.08
+    },
+    secondVal: {
+        initial: 1556.95,
+        aliq: 0.09
+    },
+    thirdVal: {
+        initial: 2594.93,
+        aliq: 0.11
+    },
+    fourthVal: {
+        initial: 5189.82,
+        aliq: 570.88
+    }
+}
+
+const IR = {
+    firstVal: {
+        initial: 0,
+        aliq: 0,
+        portion: 0
+    },
+    secondVal: {
+        initial: 1903.99,
+        aliq: 0.075,
+        portion: 142.80
+
+    },
+    thirdVal: {
+        initial: 2826.66,
+        aliq: 0.15,
+        portion: 354.80
+    },
+    fourthVal: {
+        initial: 3751.06,
+        aliq: 22.5,
+        portion: 636.13
+    },
+    fifthVal: {
+        initial: 4664.68,
+        aliq: 27.5,
+        portion: 869.36
+    }
+}
+
+if (salary >= INSS.firstVal.initial && salary < INSS.secondVal.initial) {
+    finalValue = salary * (1 - INSS.firstVal.aliq);
+} else if (salary >= INSS.secondVal.initial && salary < INSS.thirdVal.initial) {
+    finalValue = salary * (1 - INSS.secondVal.aliq);
+} else if (salary >= INSS.thirdVal.initial && salary < INSS.fourthVal.initial) {
+    finalValue = salary * (1 - INSS.thirdVal.aliq);
+} else if (salary >= INSS.fourthVal.initial) {
+    finalValue = salary - INSS.fourthVal.aliq;
+}
+
+if (finalValue >= IR.firstVal.initial && finalValue < IR.secondVal.initial) {
+    finalValue = finalValue * (1 - IR.firstVal.aliq) + IR.firstVal.portion;
+} else if (finalValue >= IR.secondVal.initial && finalValue < IR.thirdVal.initial) {
+    finalValue = finalValue * (1 - IR.secondVal.aliq) + IR.secondVal.portion;
+} else if (finalValue >= IR.thirdVal.initial && finalValue < IR.fourthVal.initial) {
+    finalValue = finalValue * (1 - IR.thirdVal.aliq) + IR.thirdVal.portion;
+} else if (finalValue >= IR.fourthVal.initial && finalValue < IR.fifthVal.initial) {
+    finalValue = finalValue * (1 - IR.fourthVal.aliq) + IR.fourthVal.portion;
+} else if (finalValue >= IR.fifthVal.initial) {
+    finalValue = finalValue * (1 - IR.fifthVal.aliq) + IR.fifthVal.portion;
+}
+
+console.log(finalValue);
