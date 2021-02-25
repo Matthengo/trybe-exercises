@@ -33,3 +33,11 @@ numbers.forEach((value, index) => {
 });
 
 console.log(sum);
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 3: ");
+
+let mediaArit = sum / numbers.length;
+
+console.log(mediaArit);
