@@ -14,7 +14,7 @@ for (let val of numbers) {
     console.log(val);
 }
 
-numbers.forEach((value, index) => console.log(value));
+numbers.forEach((value) => console.log(value));
  */
 
 for (let val = 0; val < numbers.length; val += 1) {
@@ -28,7 +28,7 @@ console.log("Exercicio 2: ");
 
 let sum = 0;
 
-numbers.forEach((value, index) => {
+numbers.forEach((value) => {
     sum += value;
 });
 
@@ -58,10 +58,27 @@ console.log("Exercicio 5: ");
 
 let greaterNum = 0;
 
-numbers.forEach((value, index) => {
+numbers.forEach((value) => {
     if (value > greaterNum) {
         greaterNum = value;
     }
 })
 
 console.log(`Maior número: ${greaterNum}`);
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 6: ");
+
+let oddNumbers = 0;
+numbers.forEach((value) => {
+    if ((value % 2) == 1) {
+        oddNumbers += 1;
+    }
+})
+
+if (oddNumbers) {
+    console.log(`Existem ${oddNumbers} ímpares`);
+} else {
+    console.log("Não existem ímpares");
+}
