@@ -124,8 +124,7 @@ console.log(arrayDivTwo);
 console.log();
 console.log("---------------------");
 console.log("Bônus 1: ");
-
-let numbersCrescent = numbers;
+let numbersCrescent = [...numbers];
 
 for (let i = 1; i < numbersCrescent.length; i++) {
     for (let j = 0; j < i; j++) {
@@ -144,7 +143,7 @@ console.log();
 console.log("---------------------");
 console.log("Bônus 2: ");
 
-let numbersDecrescent = numbers;
+let numbersDecrescent = [...numbers];
 
 for (let i = 1; i < numbersDecrescent.length; i++) {
     for (let j = 0; j < i; j++) {
@@ -158,3 +157,19 @@ for (let i = 1; i < numbersDecrescent.length; i++) {
 }
 
 console.log(numbersDecrescent);
+
+console.log();
+console.log("---------------------");
+console.log("Bônus 3: ");
+
+let multipBoth = [];
+
+for (let index = 0; index < numbers.length; index += 1) {
+    if (index == (numbers.length - 1)) {
+        multipBoth.push(numbers[index] * 2);
+        continue;
+    }
+    multipBoth.push(numbers[index] * numbers[(index + 1)]);
+}
+
+console.log(multipBoth);
