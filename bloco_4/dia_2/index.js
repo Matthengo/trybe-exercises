@@ -108,3 +108,15 @@ for (let number = 1; number <= 25; number += 1) {
 }
 
 console.log(arrayOfNum);
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 9: ");
+
+let arrayDivTwo = [];
+
+for (const number of arrayOfNum) {
+    arrayDivTwo.push(number / 2)
+}
+
+console.log(arrayDivTwo);
