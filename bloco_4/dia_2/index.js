@@ -82,3 +82,17 @@ if (oddNumbers) {
 } else {
     console.log("Não existem ímpares");
 }
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 7: ");
+
+let lesserNum = numbers[1];
+
+numbers.forEach((value, index) => {
+    if (value < lesserNum) {
+        lesserNum = value;
+    }
+});
+
+console.log(`Menor número: ${lesserNum}`);
