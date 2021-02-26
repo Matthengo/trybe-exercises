@@ -21,16 +21,16 @@ for (let val = 0; val < numbers.length; val += 1) {
     console.log(numbers[val]);
 }
 
-//Exercicios utilizando forEach, pois tem uma sintaxe mais simples.
+//Exercicios utilizando for...of, pois tem uma sintaxe mais simples.
 console.log();
 console.log("---------------------");
 console.log("Exercicio 2: ");
 
 let sum = 0;
 
-numbers.forEach((value) => {
+for (const value of numbers) {
     sum += value;
-});
+}
 
 console.log(sum);
 
@@ -58,11 +58,11 @@ console.log("Exercicio 5: ");
 
 let greaterNum = 0;
 
-numbers.forEach((value) => {
+for (const value of numbers) {
     if (value > greaterNum) {
         greaterNum = value;
     }
-})
+}
 
 console.log(`Maior número: ${greaterNum}`);
 
@@ -89,10 +89,22 @@ console.log("Exercicio 7: ");
 
 let lesserNum = numbers[1];
 
-numbers.forEach((value, index) => {
+for (const value of numbers) {
     if (value < lesserNum) {
         lesserNum = value;
     }
-});
+}
 
 console.log(`Menor número: ${lesserNum}`);
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 8: ");
+
+let arrayOfNum = [];
+
+for (let number = 1; number <= 25; number += 1) {
+    arrayOfNum.push(number);
+}
+
+console.log(arrayOfNum);
