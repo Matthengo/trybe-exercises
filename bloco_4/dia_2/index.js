@@ -139,3 +139,22 @@ for (let i = 1; i < numbersCrescent.length; i++) {
 }
 
 console.log(numbersCrescent);
+
+console.log();
+console.log("---------------------");
+console.log("Bônus 2: ");
+
+let numbersDecrescent = numbers;
+
+for (let i = 1; i < numbersDecrescent.length; i++) {
+    for (let j = 0; j < i; j++) {
+        if (numbersDecrescent[i] > numbersDecrescent[j]) {
+            let position = numbersDecrescent[i];
+
+            numbersDecrescent[i] = numbersDecrescent[j];
+            numbersDecrescent[j] = position;
+        }
+    }
+}
+
+console.log(numbersDecrescent);
