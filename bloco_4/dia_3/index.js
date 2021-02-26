@@ -16,42 +16,53 @@ console.log();
 console.log("---------------------");
 console.log("Exercicio 1: ");
 
-const value = 4;
+const value = 5;
 const star = "*";
-let squareRow = "";
+let row = "";
 
 /* 
 //Jeito 1
 if (value > 1) {
     for (let linha = 0; linha < value; linha += 1) {
-        squareRow += star;
+        row += star;
     }
 
     for (let coluna = 0; coluna < value; coluna += 1) {
-        console.log(squareRow);
+        console.log(row);
     }
 } */
 
 //Jeito 2
-if (value > 1) {
-    squareRow = star.repeat(value);
+/* if (value > 1) {
+    row = star.repeat(value);
 
     for (let coluna = 0; coluna < value; coluna += 1) {
-        console.log(squareRow);
+        console.log(row);
     }
-}
+} */
 /* 
 //Jeito 3
 if (value > 1) {
     for (let linha = 1; linha <= (value ** 2); linha += 1) {
         if (!(linha % value) == 0 || linha == value ** 2) {
-            squareRow += star;
+            row += star;
         } else {
-            squareRow += star + "\n"
+            row += star + "\n"
         }
     }
-    console.log(squareRow);
+    console.log(row);
 } */
+
+//Jeito 4:
+if (value > 1) {
+    for (let coluna = 0; coluna < value; coluna += 1) {
+        row = ""
+        for (let linha = 0; linha < value; linha += 1) {
+            row += star;
+        }
+        console.log(row);
+    }
+}
 
 /* 2- Para o segundo exercício, faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos de base. Por exemplo:
 
@@ -66,12 +77,72 @@ console.log();
 console.log("---------------------");
 console.log("Exercicio 2: ");
 
-squareRow = "";
+row = "";
 
 //Jeito 1:
 if (value > 1) {
     for (let linha = 0; linha < value; linha += 1) {
-        squareRow += star;
-        console.log(squareRow);
+        row += star;
+        console.log(row);
+    }
+}
+
+/* 3- Agora inverta o lado do triângulo. Por exemplo:
+
+n = 5
+    *
+   **
+  ***
+ ****
+***** */
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 3: ");
+
+const space = " ";
+
+/* //Jeito 1 (.lenght + continue) :
+if (value > 1) {
+    for (let linha = 1; linha <= value; linha += 1) {
+        row = "";
+        for (let coluna = 1; coluna <= value; coluna += 1) {
+            if (row.length >= (value - linha)) {
+                row += star;
+                continue;
+            }
+            row += space
+        }
+        console.log(row);
+    }
+} */
+
+/* //Jeito 2 (continue):
+if (value > 1) {
+    for (let linha = 1; linha <= value; linha += 1) {
+        row = "";
+        for (let coluna = 1; coluna <= value; coluna += 1) {
+            if (coluna > (value - linha)) {
+                row += star;
+                continue;
+            }
+            row += space
+        }
+        console.log(row);
+    }
+} */
+
+//Jeito 3:
+if (value > 1) {
+    for (let linha = 1; linha <= value; linha += 1) {
+        row = "";
+        for (let coluna = 1; coluna <= value; coluna += 1) {
+            if (coluna > (value - linha)) {
+                row += star;
+            } else {
+                row += space
+            }
+        }
+        console.log(row);
     }
 }
