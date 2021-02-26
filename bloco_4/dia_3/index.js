@@ -1,12 +1,22 @@
 console.log("-----Hello-World-----");
 console.log("-----Aula -- 4.3-----");
 
-/* 1 - Faça um programa que, dado um valor n qualquer, seja n > 1 , imprima na tela um quadrado feito de asteriscos de lado de tamanho n . Por exemplo: */
+/* 1 - Faça um programa que, dado um valor n qualquer, seja n > 1 , imprima na tela um quadrado feito de asteriscos de lado de tamanho n . Por exemplo: 
+
+n = 5
+
+*****
+*****
+*****
+*****
+*****
+
+*/
 console.log();
 console.log("---------------------");
 console.log("Exercicio 1: ");
 
-const value = 2;
+const value = 4;
 const star = "*";
 let squareRow = "";
 
@@ -42,3 +52,26 @@ if (value > 1) {
     }
     console.log(squareRow);
 } */
+
+/* 2- Para o segundo exercício, faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos de base. Por exemplo:
+
+n = 5
+*
+**
+***
+****
+***** */
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 2: ");
+
+squareRow = "";
+
+//Jeito 1:
+if (value > 1) {
+    for (let linha = 0; linha < value; linha += 1) {
+        squareRow += star;
+        console.log(squareRow);
+    }
+}
