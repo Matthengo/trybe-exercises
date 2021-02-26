@@ -120,3 +120,22 @@ for (const number of arrayOfNum) {
 }
 
 console.log(arrayDivTwo);
+
+console.log();
+console.log("---------------------");
+console.log("Bônus 1: ");
+
+let numbersCrescent = numbers;
+
+for (let i = 1; i < numbersCrescent.length; i++) {
+    for (let j = 0; j < i; j++) {
+        if (numbersCrescent[i] < numbersCrescent[j]) {
+            let position = numbersCrescent[i];
+
+            numbersCrescent[i] = numbersCrescent[j];
+            numbersCrescent[j] = position;
+        }
+    }
+}
+
+console.log(numbersCrescent);
