@@ -146,3 +146,40 @@ if (value > 1) {
         console.log(row);
     }
 }
+
+/* 4- Depois, faça uma pirâmide com n asteriscos de base:
+n = 5
+
+  *
+ ***
+***** 
+*/
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 4: ");
+
+const height = Math.ceil(value / 2);
+const halfTriangle = height + 1;
+
+if (!(value % 2) == 0) {
+    for (let linha = 1; linha <= height; linha += 1) {
+        row = "";
+        for (let coluna = 1; coluna <= value; coluna += 1) {
+            if (coluna <= height) {
+                if (coluna > height - linha) {
+                    row += star;
+                } else {
+                    row += space;
+                }
+            } else {
+                if (coluna - linha < height) {
+                    row += star;
+                } else {
+                    row += space;
+                }
+            }
+        }
+        console.log(row)
+    }
+}
