@@ -147,3 +147,39 @@ function greaterName(names) {
 }
 console.log(names);
 console.log(`Maior nome é: ${greaterName(names)}`);
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 5: ");
+
+numbers = [2, 3, 2, 5, 8, 2, 3];
+
+function mostRepeated(numbers) {
+
+    let repeatedNumbers = {};
+    let mostRepeated = [];
+    let greaterRepetition = 0;
+
+    for (const number in numbers) {
+        let numOfTimes = 0;
+        for (const number2 in numbers) {
+            if (numbers[number] == numbers[number2]) {
+                numOfTimes += 1;
+                repeatedNumbers[numbers[number]] = numOfTimes;
+            }
+        }
+    }
+
+    for (const number in repeatedNumbers) {
+        if (repeatedNumbers[number] >= greaterRepetition) {
+            greaterRepetition = repeatedNumbers[number];
+            mostRepeated.push(number);
+        }
+    }
+
+    return mostRepeated;
+
+
+}
+
+console.log(`Número(s) que mais repetem: ${mostRepeated(numbers)}`);
