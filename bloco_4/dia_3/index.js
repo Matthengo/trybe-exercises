@@ -16,7 +16,7 @@ console.log();
 console.log("---------------------");
 console.log("Exercicio 1: ");
 
-const value = 5;
+const value = 7;
 const star = "*";
 let row = "";
 
@@ -160,26 +160,51 @@ console.log("---------------------");
 console.log("Exercicio 4: ");
 
 const height = Math.ceil(value / 2);
-const halfTriangle = height + 1;
 
 if (!(value % 2) == 0) {
     for (let linha = 1; linha <= height; linha += 1) {
         row = "";
-        for (let coluna = 1; coluna <= value; coluna += 1) {
-            if (coluna <= height) {
-                if (coluna > height - linha) {
-                    row += star;
-                } else {
-                    row += space;
-                }
+
+        for (let col = 1; col <= value; col += 1) {
+            if (col <= height - linha || col >= height + linha) {
+                row += space;
             } else {
-                if (coluna - linha < height) {
-                    row += star;
-                } else {
-                    row += space;
-                }
+                row += star;
             }
+
         }
-        console.log(row)
+
+        console.log(row);
+    }
+}
+
+/* 5- Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de n será sempre ímpar:
+
+Por último, façamos com que a variável seja incrementada com o valor correspondente a cada loop;
+n = 7
+
+   *
+  * *
+ *   *
+******* */
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 5: ");
+
+if (!(value % 2) == 0) {
+    for (let linha = 1; linha <= height; linha += 1) {
+        row = "";
+
+        for (let col = 1; col <= value; col += 1) {
+            if (col == (height - linha + 1) || col == (height + linha - 1) || linha == height) {
+                row += star;
+            } else {
+                row += space;
+            }
+
+        }
+
+        console.log(row);
     }
 }
