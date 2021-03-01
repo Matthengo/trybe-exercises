@@ -183,3 +183,20 @@ function mostRepeated(numbers) {
 }
 
 console.log(`Número(s) que mais repetem: ${mostRepeated(numbers)}`);
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 6: ");
+
+const value = 6;
+
+function sumUntil(value) {
+    let sum = 0;
+    for (let number = value; number > 0; number -= 1) {
+        sum += number;
+    }
+
+    return sum;
+}
+
+console.log(`Soma dos números até chegar em ${value}: ${sumUntil(value)}`);
