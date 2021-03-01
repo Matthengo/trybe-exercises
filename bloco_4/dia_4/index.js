@@ -128,3 +128,22 @@ function lesserNumber(array) {
 }
 
 console.log(lesserNumber(numbers));
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 4: ");
+
+let names = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+
+function greaterName(names) {
+    let greaterName = names[0];
+    for (let name of names) {
+        if (name.length > greaterName.length) {
+            greaterName = name;
+        }
+    }
+
+    return greaterName;
+}
+console.log(names);
+console.log(`Maior nome é: ${greaterName(names)}`);
