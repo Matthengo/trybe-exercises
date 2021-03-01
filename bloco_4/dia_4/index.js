@@ -47,7 +47,6 @@ let info2 = {
     origem: "Christmas on Bear Mountain, Dell's Four Color Comics #178",
     nota: "O último MacPatinhas",
 }
-
 info2['recorrente'] = 'Sim';
 
 console.log(`${info.personagem} e ${info2.personagem}`);
@@ -95,7 +94,7 @@ console.log();
 console.log("---------------------");
 console.log("Exercicio 2: ");
 
-const numbers = [2, 3, 6, 7, 10, 1];
+let numbers = [2, 3, 6, 7, 10, 1];
 
 function greaterNumber(array) {
     let greaterNumber = 0;
@@ -110,3 +109,22 @@ function greaterNumber(array) {
 
 console.log(numbers);
 console.log(`Maior número é o do índice: ${greaterNumber(numbers)}`);
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 3: ");
+
+numbers = [2, 4, 6, 7, 10, 0, -3];
+
+function lesserNumber(array) {
+    let lesserNumber = array[0];
+    for (let index in array) {
+        if (array[index] < lesserNumber) {
+            lesserNumber = array[index];
+        }
+    }
+
+    return array.indexOf(lesserNumber);
+}
+
+console.log(lesserNumber(numbers));
