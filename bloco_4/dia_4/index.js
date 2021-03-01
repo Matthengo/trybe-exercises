@@ -200,3 +200,32 @@ function sumUntil(value) {
 }
 
 console.log(`Soma dos números até chegar em ${value}: ${sumUntil(value)}`);
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 7: ");
+
+const stringWord = 'trybe';
+const endWord = 'ybe';
+
+function verifyEndWord(word, endWord) {
+    let count = 0;
+    for (let index in endWord) {
+        let wordIndex = word[(word.length - index - 1)];
+        let endWordIndex = endWord[endWord.length - index - 1];
+        if (wordIndex === endWordIndex) {
+            count += 1;
+        } else {
+            count = 0
+            break;
+        }
+    }
+
+    if (count > 0) {
+        return true;
+    }
+
+    return false;
+}
+
+console.log(verifyEndWord(stringWord, endWord));
