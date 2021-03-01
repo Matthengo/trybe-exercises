@@ -90,3 +90,23 @@ function verifyPalindrome(wordToConvert) {
 }
 
 console.log(verifyPalindrome(word));
+
+console.log();
+console.log("---------------------");
+console.log("Exercicio 2: ");
+
+const numbers = [2, 3, 6, 7, 10, 1];
+
+function greaterNumber(array) {
+    let greaterNumber = 0;
+    for (let index in array) {
+        if (array[index] > greaterNumber) {
+            greaterNumber = array[index];
+        }
+    }
+
+    return array.indexOf(greaterNumber);
+}
+
+console.log(numbers);
+console.log(`Maior número é o do índice: ${greaterNumber(numbers)}`);
