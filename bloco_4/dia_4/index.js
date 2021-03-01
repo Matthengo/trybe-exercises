@@ -56,3 +56,37 @@ console.log(`${info.nota} e ${info2.nota}`);
 if (info.recorrente == "Sim" && info2.recorrente == "Sim") {
     console.log("Ambos recorrentes");
 }
+
+console.log();
+console.log("Parte 2 - Funções");
+console.log();
+console.log("---------------------");
+console.log("Exercicio 1: ");
+
+/*
+    Funções podem ser escritas como:
+    - function name() {};       -> Past ES6
+        or const name = function() {};
+    - const name = () => {};    -> Pos ES6
+*/
+
+const word = 'Arara';
+
+function verifyPalindrome(wordToConvert) {
+    const lowerCaseWord = wordToConvert.toLowerCase();
+    let transformedWord = '';
+    for (let letter = (lowerCaseWord.length - 1); letter >= 0; letter -= 1) {
+        transformedWord += lowerCaseWord[letter];
+    }
+
+    if (lowerCaseWord === transformedWord) {
+        /* return true; */
+        return `A palavra ${wordToConvert} é um Palindromo`;
+    } else {
+        /* return false; */
+        return `A palavra ${wordToConvert} não é um Palindromo`;
+    }
+
+}
+
+console.log(verifyPalindrome(word));
