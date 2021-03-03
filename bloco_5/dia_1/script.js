@@ -21,6 +21,24 @@ function changeText(element, text, elementNum) {
     document.querySelectorAll(element)[(elementNum - 1)].innerText = text;
 }
 
+/**
+ * Função que muda o background color de um elemento HTML.
+ * @param {string} className      Elemento a ser modificado
+ * @param {string} color        Cor a ser adicionado
+ */
+function changeBgColorByClass(className, color) {
+    const element = document.getElementsByClassName(className);
+    for (let value of element) {
+        value.style.backgroundColor = color;
+    }
+}
+
+// Exercicio 1.
 const text = 'Eu imagino que daqui 2 anos eu esteja trabalhando na área de programação, independente de qual seja e esteja conseguindo realizar meus sonhos.';
 
 changeText('p', text, 2);
+
+// Exercicio 2.
+const color = 'rgb(76,164,109)';
+
+changeBgColorByClass('main-content', color);
