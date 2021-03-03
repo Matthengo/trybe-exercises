@@ -229,3 +229,5 @@ function verifyEndWord(word, endWord) {
 }
 
 console.log(verifyEndWord(stringWord, endWord));
+
+// TODO: Exercicios bônus;
