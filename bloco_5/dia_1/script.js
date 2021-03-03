@@ -23,13 +23,24 @@ function changeText(element, text, elementNum) {
 
 /**
  * Função que muda o background color de um elemento HTML.
- * @param {string} className    Elemento a ser modificado
+ * @param {string} className    Classe a ser modificada
  * @param {string} color        Cor a ser adicionado
  */
 function changeBgColorByClass(className, color) {
     const element = document.getElementsByClassName(className);
     for (let value of element) {
         value.style.backgroundColor = color;
+    }
+}
+
+/**
+ * Faz um texto de um determinado elemento ficar com as letras maiusculas.
+ * @param {string} element Elemento a ser modificado
+ */
+function toUppercaseText(element) {
+    const elements = document.querySelectorAll(element);
+    for (let value of elements) {
+        value.innerText = value.innerText.toUpperCase();
     }
 }
 
@@ -51,3 +62,6 @@ changeBgColorByClass('center-content', color);
 // Exercicio 4.
 text = "Exercício 5.1 - Javascript";
 changeText('.title', text, 1);
+
+// Exercicio 5.
+toUppercaseText('p');
