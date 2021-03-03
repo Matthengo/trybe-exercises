@@ -39,6 +39,11 @@ const text = 'Eu imagino que daqui 2 anos eu esteja trabalhando na área de prog
 changeText('p', text, 2);
 
 // Exercicio 2.
-const color = 'rgb(76,164,109)';
+let color = 'rgb(76,164,109)';
 
 changeBgColorByClass('main-content', color);
+
+// Exercicio 3.
+color = 'white';
+
+changeBgColorByClass('center-content', color);
