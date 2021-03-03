@@ -44,6 +44,17 @@ function toUppercaseText(element) {
     }
 }
 
+/**
+ * Imprime o texto de um elemento no console
+ * @param {string} element Elemento que terá seu texto impresso no console.
+ */
+function printText(element) {
+    const elements = document.querySelectorAll(element);
+    for (let value of elements) {
+        console.log(value.innerText);
+    }
+}
+
 // Exercicio 1.
 let text = 'Eu imagino que daqui 2 anos eu esteja trabalhando na área de programação, independente de qual seja e esteja conseguindo realizar meus sonhos.';
 
@@ -65,3 +76,6 @@ changeText('.title', text, 1);
 
 // Exercicio 5.
 toUppercaseText('p');
+
+// Exercicio 6.
+printText('p');
