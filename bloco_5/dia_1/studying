@@ -1,5 +1,0 @@
-Funções úteis:
-    - document.getElementById(): Busca um determinado elemento (tag) pelo seu ID.
-        - .innerHTML: Retorna o conteúdo dentro dessa tag, sem mostrar sua própria tag.
-        - .innerText: Apenas retorna o texto dentro da tag, ignorando todas as outras tags subsequentes.
-        - .style: Retorna todos os estilos CSS do elemento.
