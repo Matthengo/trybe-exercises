@@ -116,7 +116,15 @@
             let h3 = addElement('h3', '', mainContent);
         }
 
-        h1.classList.add('title')
+        h1.classList.add('title');
+
+        let h3 = document.querySelectorAll('h3');
+        for (let item of h3) {
+            item.classList.add('description');
+        }
+
+        let leftContParent = leftContent.parentNode;
+        leftContParent.removeChild(leftContent);
     </script>
 </body>
 
