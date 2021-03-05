@@ -88,8 +88,14 @@
         }
 
         let h1 = addElement('h1', 'Exercício 5.2 - JavaScript DOM');
-        h1.classList.add('test')
-        console.log(h1);
+
+        let mainContent = addElement('div');
+        mainContent.classList.add('main-content');
+
+        let centerContent = addElement('div', '', mainContent);
+        centerContent.classList.add('center-content');
+
+        let p = addElement('p', 'Algum texto', centerContent);
     </script>
 </body>
 
