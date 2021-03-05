@@ -96,6 +96,16 @@
         centerContent.classList.add('center-content');
 
         let p = addElement('p', 'Algum texto', centerContent);
+
+        let leftContent = addElement('div', '', mainContent);
+        leftContent.classList.add('left-content');
+
+        let rightContent = addElement('div', '', mainContent);
+        rightContent.classList.add('right-content');
+
+        let smallImage = addElement('img', '', leftContent);
+        smallImage.setAttribute('src', 'https://picsum.photos/200');
+        smallImage.classList.add('small-image');
     </script>
 </body>
 
