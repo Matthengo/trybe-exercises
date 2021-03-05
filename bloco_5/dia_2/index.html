@@ -106,6 +106,17 @@
         let smallImage = addElement('img', '', leftContent);
         smallImage.setAttribute('src', 'https://picsum.photos/200');
         smallImage.classList.add('small-image');
+
+        let ul = addElement('ul', '', rightContent);
+        for (let item = 1; item <= 10; item += 1) {
+            let li = addElement('li', item, ul);
+        }
+
+        for (let item = 1; item <= 3; item += 1) {
+            let h3 = addElement('h3', '', mainContent);
+        }
+
+        h1.classList.add('title')
     </script>
 </body>
 
