@@ -48,5 +48,24 @@ function createDaysOfTheMonth() {
     }
 }
 
+/**
+ * Creates a button
+ * @param {String} buttonText   Button text. 
+ * @param {String} parentButton Parent class, id or tag. Must have dot for classes and hashtag for ids.
+ * @param {String} id           (Optional) Button Id. Doesn't need hashtag.
+ * @returns The button itself.
+ */
+function createButton(buttonText, parentButton, id = null) {
+    let parent = document.querySelector(parentButton);
+    let button = document.createElement('button');
+    button.innerHTML = buttonText;
+    button.id = id;
+
+    parent.appendChild(button);
+
+    return button;
+}
+
 createDaysOfTheWeek();
 createDaysOfTheMonth();
+createButton('Feriados', '.buttons-container', 'btn-holiday');
