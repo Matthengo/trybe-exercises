@@ -87,44 +87,69 @@
 
         }
 
+
+        // 1
         let h1 = addElement('h1', 'Exercício 5.2 - JavaScript DOM');
 
+        // 2
         let mainContent = addElement('div');
         mainContent.classList.add('main-content');
 
+        // 3
         let centerContent = addElement('div', '', mainContent);
         centerContent.classList.add('center-content');
 
+        // 4
         let p = addElement('p', 'Algum texto', centerContent);
 
+        // 5
         let leftContent = addElement('div', '', mainContent);
         leftContent.classList.add('left-content');
 
+        // 6
         let rightContent = addElement('div', '', mainContent);
         rightContent.classList.add('right-content');
 
+        // 7
         let smallImage = addElement('img', '', leftContent);
         smallImage.setAttribute('src', 'https://picsum.photos/200');
         smallImage.classList.add('small-image');
 
+        // 8
         let ul = addElement('ul', '', rightContent);
         for (let item = 1; item <= 10; item += 1) {
             let li = addElement('li', item, ul);
         }
 
+        // 9
         for (let item = 1; item <= 3; item += 1) {
             let h3 = addElement('h3', '', mainContent);
         }
 
+        // 10
         h1.classList.add('title');
 
+        // 11
         let h3 = document.querySelectorAll('h3');
         for (let item of h3) {
             item.classList.add('description');
         }
 
+        // 12
         let leftContParent = leftContent.parentNode;
         leftContParent.removeChild(leftContent);
+
+        // 13
+        rightContent.style.marginRight = 'auto';
+
+        // 14
+        let centerContParent = centerContent.parentNode;
+        centerContParent.style.backgroundColor = 'green';
+
+        // 15
+        let listItems = ul.childNodes;
+        ul.removeChild(listItems[(listItems.length - 1)]);
+        ul.removeChild(listItems[(listItems.length - 1)]);
     </script>
 </body>
 
