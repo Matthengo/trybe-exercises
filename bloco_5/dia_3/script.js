@@ -66,6 +66,25 @@ function createButton(buttonText, parentButton, id = null) {
     return button;
 }
 
+function changeBgColor(element, color) {
+    let elements = document.querySelectorAll(element);
+    for (let item of elements) {
+        item.style.backgroundColor = color;
+    }
+}
+
+function changeText(element, text) {
+    let elements = document.querySelectorAll(element);
+    for (let item of elements) {
+        item.innerText = text;
+    }
+}
+
 createDaysOfTheWeek();
 createDaysOfTheMonth();
-createButton('Feriados', '.buttons-container', 'btn-holiday');
+
+const holidayButton = createButton('Feriados', '.buttons-container', 'btn-holiday');
+
+/* buttonEvent(holidayButton, 'click', changeBgColor('.holiday', 'red')); */
+
+holidayButton.addEventListener('click', () => changeBgColor('.holiday', 'red'))
