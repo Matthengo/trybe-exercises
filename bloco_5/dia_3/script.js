@@ -23,10 +23,8 @@ function isSomeDayEqual(day, arrayOfDays) {
     return isEqual;
 }
 
-function createDaysOfTheMonth() {
+function createDaysOfTheMonth(holidays = null, fridays = null) {
     const dezDays = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-    const holidays = [24, 25, 31];
-    const fridays = [4, 11, 18, 25];
 
     const dezDaysList = document.querySelector('#days');
 
@@ -66,29 +64,40 @@ function createButton(buttonText, parentButton, id = null) {
     return button;
 }
 
-function changeBgColor(element, color) {
-    let elements = document.querySelectorAll(element);
-    for (let item of elements) {
-        item.style.backgroundColor = color;
-    }
+function changeBgColor(element, newColor, oldColor) {
+    const elements = document.querySelectorAll(element);
+    elements.forEach((value) => {
+        if (value.style.backgroundColor === newColor) {
+            value.style.backgroundColor = oldColor;
+        } else {
+            value.style.backgroundColor = newColor;
+        }
+    })
 }
 
-function changeText(element, text) {
-    let elements = document.querySelectorAll(element);
-    for (let item of elements) {
-        item.innerText = text;
-    }
+function changeText(element, newText, oldTexts) {
+    const elements = document.querySelectorAll(element);
+
+    elements.forEach((value, index) => {
+        if (value.innerText !== String(oldTexts[index])) {
+            value.innerText = oldTexts[index];
+        } else {
+            value.innerText = newText;
+        }
+    })
 }
+
+const holidays = [24, 25, 31];
+const fridays = [4, 11, 18, 25];
+const listBackgroundColor = 'rgb(238, 238, 238)';
 
 createDaysOfTheWeek();
-createDaysOfTheMonth();
+createDaysOfTheMonth(holidays, fridays);
 
 const holidayButton = createButton('Feriados', '.buttons-container', 'btn-holiday');
 
 const fridayButton = createButton('Sexta-Feira', '.buttons-container', 'btn-friday');
 
-/* buttonEvent(holidayButton, 'click', changeBgColor('.holiday', 'red')); */
+holidayButton.addEventListener('click', () => changeBgColor('.holiday', 'blue', listBackgroundColor));
 
-holidayButton.addEventListener('click', () => changeBgColor('.holiday', 'red'));
-
-fridayButton.addEventListener('click', () => changeText('.friday', 'Sextou!!'));
+fridayButton.addEventListener('click', () => changeText('.friday', 'Sextou!!', fridays));
