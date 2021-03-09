@@ -73,17 +73,12 @@ function changeBgColor(element, color) {
     }
 }
 
-function changeText(element, text) {
-    let elements = document.querySelectorAll(element);
-    for (let item of elements) {
-        item.innerText = text;
-    }
-}
-
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 
 const holidayButton = createButton('Feriados', '.buttons-container', 'btn-holiday');
+
+const fridayButton = createButton('Sexta-Feira', '.buttons-container', 'btn-friday');
 
 /* buttonEvent(holidayButton, 'click', changeBgColor('.holiday', 'red')); */
 
