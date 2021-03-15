@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>5.2 - Part I</title>
+</head>
+
+<body>
+    <div id="paiDoPai">
+        <div id="pai">
+            <div id="primeiroFilho"></div>
+            <div id="elementoOndeVoceEsta">
+                <div id="primeiroFilhoDoFilho"></div>
+                <div id="segundoEUltimoFilhoDoFilho"></div>
+            </div>
+            Atenção!
+            <div id="terceiroFilho"></div>
+            <div id="quartoEUltimoFilho"></div>
+        </div>
+    </div>
+
+    <!-- 
+        1 - Acesse o elemento elementoOndeVoceEsta .
+        2 - Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+        3 - Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+        4 - Acesse o primeiroFilho a partir de pai .
+        5 - Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
+        6 - Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+        7 - Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
+        8 - Agora acesse o terceiroFilho a partir de pai .
+    -->
+
+    <script>
+        // 1
+        const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+
+        // 2
+        elementoOndeVoceEsta.parentNode.style.color = 'red';
+
+        // 3
+        const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+        primeiroFilhoDoFilho.innerText = 'Primeiro Filho do Filho'
+
+        // 4
+        const pai = document.getElementById('pai');
+        pai.firstElementChild;
+
+        // 5
+        elementoOndeVoceEsta.previousElementSibling;
+
+        // 6
+        elementoOndeVoceEsta.nextSibling;
+        elementoOndeVoceEsta.parentNode.childNodes[4]
+
+        // 7
+        elementoOndeVoceEsta.nextElementSibling;
+        // 8
+        // posição * 2 - 1
+        pai.childNodes[(3 * 2 - 1)];
+        pai.lastElementChild.previousElementSibling;
+    </script>
+</body>
+
+</html>
