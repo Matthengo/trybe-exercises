@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(232, 232, 250);
+}
+
+fieldset, .inputed-contents-view, .button-field {
+    margin-bottom: 20px;
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+    border: 1px solid rgb(170, 170, 170);
+}
+
+.inputed-contents-view {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.button-field {
+    text-align: right;
+}
+
+.form-content {
+    width: 50%;
+    margin: 40px auto;
+}
+
+.center-form {
+    width: 80%;
+    margin: 0 auto;
+}
+input, label {
+    display: block;
+}
+
+label{
+    margin-top: 10px;
+}
+
+input[type='radio']{
+    display: inline;
+}
+
+input[type='text'] {
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+}

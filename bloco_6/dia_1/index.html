@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Exercise - 6.1</title>
+</head>
+
+<body>
+  <div class="form-content">
+    <form action="" method="get">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <div class="center-form">
+          <label for="input-name">Nome: </label>
+          <input type="text" name="name" id="input-name" placeholder="Digite seu nome" maxlength="40" required>
+          <label for="input-email">E-mail: </label>
+          <input type="email" name="email" id="input-email" placeholder="Digite seu email" maxlength="50" required>
+          <label for="input-cpf">CPF: </label>
+          <input type="text" name="cpf" id="input-cpf" placeholder="Digite seu CPF" maxlength="11" required>
+          <label for="input-endereco">Endereço: </label>
+          <input type="text" name="endereco" id="input-endereco" placeholder="Digite seu endereço" maxlength="200" required>
+          <label for="input-cidade">Cidade: </label>
+          <input type="text" name="cidade" id="input-cidade" placeholder="Digite sua cidade" maxlength="28" required>
+          <label for="input-estados">Estados: </label>
+          <select name="estados" id="input-estados"></select>
+
+          <label for='complemento'>Complemento: </label>
+
+          <label for="input-casa"><input type="radio" name="complemento" id="input-casa" value="casa" checked>Casa</label>
+
+          <label for="input-apartamento"><input type="radio" name="complemento" id="input-apartamento" value="apartamento">Apartamento</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Último Emprego</legend>
+        <div class="center-form">
+          <label for="resume-abstract">Resumo do Curriculo: </label>
+          <textarea name="resume-abstract" id="resume-abstract" cols="30" rows="10" placeholder="Digite um resumo do seu curriculo em até 1000 caracteres." required maxlength="1000"></textarea>
+
+          <label for="input-cargo">Cargo: </label>
+          <input type="text" name="cargo" id="input-cargo" placeholder="Digite seu cargo na empresa" maxlength="40" required>
+
+          <label for="role-description">Descrição do cargo: </label>
+          <textarea name="role-description" id="role-description" cols="30" rows="10" placeholder="Digite uma descrição do cargo do último trabalho em até 500 caracteres." required></textarea>
+
+          <label for="input-data-inicio">Data de inicio: </label>
+          <input type="date" name="data-inicio" id="input-data-inicio" required>
+        </div>
+      </fieldset>
+      <div class="button-field">
+        <button type="submit" id="submit-button">Enviar Formulário</button>
+        <button type="reset">Limpar</button>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
