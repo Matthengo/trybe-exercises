@@ -70,6 +70,8 @@ function smallerName() {
     if (element.name.length < nameBook.length) {
       nameBook = element.name;
     }
+    // variante
+    // element.name.length < nameBook.length && (nameBook = element.name);
   })
   return nameBook;
 }
