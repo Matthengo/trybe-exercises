@@ -1,13 +1,7 @@
-const raffleMsg = (equality) => {
-  if (equality) {
-    return 'Parabéns, você ganhou';
-  }
-
-  return 'Tente novamente';
-}
+const raffleMsg = (equality) => equality ? 'Parabens, você acertou' : 'Tente novamente';
 
 const raffle = (num, msg) => {
-  const randomNum = Math.round(Math.random() * 5);
+  const randomNum = Math.ceil(Math.random() * 5);
   const isEqual = randomNum === num;
 
   return msg(isEqual);
