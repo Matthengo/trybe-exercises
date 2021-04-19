@@ -12,6 +12,12 @@ const sum = (a, b) => {
 const myRemove = (array, removedElement) => {
   return array.filter((element) => element !== removedElement);
 }
+// ------------------------------------------------------------- 
+// -----Exercise 3---------------------------------------------- 
+const myRemoveWithoutCopy = (array, removedElement) => {
+  if(array.indexOf(removedElement) !== -1) array.splice(array.indexOf(removedElement), 1);
+  return array;
+}
 
 // Exports
-module.exports = { sum, myRemove }
+module.exports = { sum, myRemove, myRemoveWithoutCopy }
