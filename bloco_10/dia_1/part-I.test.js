@@ -1,4 +1,4 @@
-const { sum, myRemove, myRemoveWithoutCopy } = require('./part-I.js');
+const { sum, myRemove, myRemoveWithoutCopy, myFizzBuzz } = require('./part-I.js');
 
 /* 
 A função sum(a, b) retorna a soma do parâmetro a com o b
@@ -64,5 +64,38 @@ describe('myRemoveWithoutCopy() Function', () => {
 
   test("myRemoveWithoutCopy() should affect the original array", () => {
     expect(myRemoveWithoutCopy(arrayOfNum, 2)).toEqual(arrayOfNum);
+  });
+});
+
+/*
+A função myFizzBuzz(num) recebe um número num e retorna "fizzbuzz" se o número for divisível por 3 e 5 , retorna "fizz" se for divisível apenas por 3 , retorna "buzz" se divisível apenas por 5 , retorna o próprio número caso não seja divisível por 3 ou 5 e retorna false caso num não seja um número
+  - Faça uma chamada com um número divisível por 3 e 5 e verifique se o retorno é o esperado
+  - Faça uma chamada com um número divisível por 3 e verifique se o retorno é o esperado
+  - Faça uma chamada com um número divisível por 5 e verifique se o retorno é o esperado
+  - Faça uma chamada com um número que não é divisível por 3 ou 5 e verifique se o retorno é o esperado
+  - Faça uma chamada com um parâmetro que não é um número e verifique se o retorno é o esperado
+*/
+
+describe('myFizzBuzz() Function', () => {
+  test("Divisible by 3 and 5 returns 'fizzbuzz'", () => {
+    expect(myFizzBuzz(15)).toEqual('fizzbuzz');
+    expect(myFizzBuzz(30)).toEqual('fizzbuzz');
+  });
+  test("Divisible only by 3 returns 'fizz'", () => {
+    expect(myFizzBuzz(3)).toEqual('fizz');
+    expect(myFizzBuzz(9)).toEqual('fizz');
+  });
+  test("Divisible only by 5 returns 'buzz'", () => {
+    expect(myFizzBuzz(5)).toEqual('buzz');
+    expect(myFizzBuzz(10)).toEqual('buzz');
+  });
+  test("Isn't divisible by 3 or 5 returns the number", () => {
+    expect(myFizzBuzz(2)).toEqual(2);
+    expect(myFizzBuzz(7)).toEqual(7);
+  });
+  test("Isn't number returns 'false'", () => {
+    expect(myFizzBuzz({})).toEqual(false);
+    expect(myFizzBuzz([])).toEqual(false);
+    expect(myFizzBuzz('3')).toEqual(false);
   });
 });

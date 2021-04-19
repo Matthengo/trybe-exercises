@@ -18,6 +18,15 @@ const myRemoveWithoutCopy = (array, removedElement) => {
   if(array.indexOf(removedElement) !== -1) array.splice(array.indexOf(removedElement), 1);
   return array;
 }
+// ------------------------------------------------------------- 
+// -----Exercise 4---------------------------------------------- 
+const myFizzBuzz = (number) => {
+  if (typeof number !== 'number') return false;
+  if (number % 3 === 0 && number % 5 === 0) return 'fizzbuzz';
+  if (number % 3 === 0) return 'fizz';
+  if (number % 5 === 0) return 'buzz';
 
+  return number;
+}
 // Exports
-module.exports = { sum, myRemove, myRemoveWithoutCopy }
+module.exports = { sum, myRemove, myRemoveWithoutCopy, myFizzBuzz }
