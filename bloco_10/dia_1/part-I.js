@@ -8,6 +8,10 @@ const sum = (a, b) => {
   return a + b;
 }
 // ------------------------------------------------------------- 
+// -----Exercise 2---------------------------------------------- 
+const myRemove = (array, removedElement) => {
+  return array.filter((element) => element !== removedElement);
+}
 
 // Exports
-module.exports = { sum }
+module.exports = { sum, myRemove }

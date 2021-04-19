@@ -1,4 +1,4 @@
-const { sum } = require('./part-I.js');
+const { sum, myRemove } = require('./part-I.js');
 
 /* 
 A função sum(a, b) retorna a soma do parâmetro a com o b
@@ -16,5 +16,30 @@ describe('Sum Function', () => {
   test('sum() returns error if parameters arent numbers', () => {
     expect(() => { sum(4, '5') }).toThrow();
     expect(() => { sum(4, '5') }).toThrowError('parameters must be numbers');
+  });
+});
+
+// -----------------------------------------------------------------------------------
+
+/* 
+A função myRemove(arr, item) recebe um array arr e retorna uma cópia desse array sem o elemento item caso ele exista no array
+  - Verifique se a chamada myRemove([1, 2, 3, 4], 3) retorna o array esperado
+  - Verifique se a chamada myRemove([1, 2, 3, 4], 3) não retorna o array [1, 2, 3, 4]
+  - Verifique se o array passado por parâmetro não sofreu alterações
+  - Verifique se a chamada myRemove([1, 2, 3, 4], 5) retorna o array esperado
+*/
+
+describe('myRemove Function', () => {
+  const arrayOfNum = [1, 2, 3, 4];
+
+  test("myRemove() returns the array's copy without the element especified", () => {
+    expect(myRemove(arrayOfNum, 3)).toEqual([1, 2, 4]);
+    expect(myRemove(arrayOfNum, 5)).toEqual([1, 2, 3, 4]);
+
+    expect(myRemove(arrayOfNum, 3)).not.toEqual([1, 2, 3, 4]);
+  });
+
+  test("myRemove() shouldn't affect the original array", () => {
+    expect(myRemove(arrayOfNum, 3)).not.toEqual(arrayOfNum);
   });
 });
