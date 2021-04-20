@@ -49,4 +49,20 @@ const techList = (technologies, userName) => {
   }));
 } 
 // ------------------------------------------------------------- 
-module.exports = { encode, decode, techList }
+// A função hydrate recebe uma string no formato "numero bebida", e retorna a sugestão de quantos copos de água você deve beber para se hidratar. Para cada bebida, deve-se tomar um copo de água para não ter ressaca
+// -----Exercise 3----------------------------------------------
+const hydrate = (stringNumOfDrinks) => {
+  const numOfDrinksArray = stringNumOfDrinks.split(' ');
+  const numOfDrinks = numOfDrinksArray.reduce((count,word) => {
+    let drinks = count;
+    if(Number.isInteger(parseInt(word))) {
+      drinks += parseInt(word);
+    }
+    return drinks;
+  }, 0)
+
+  if(numOfDrinks === 1) return `${numOfDrinks} copo de água`;
+
+  return `${numOfDrinks} copos de água`;
+}
+module.exports = { encode, decode, techList, hydrate }
