@@ -39,5 +39,14 @@ const decode = (stringToDecode) => {
   return codify(stringToDecode, 'decode');
 };
 // ------------------------------------------------------------- 
-
-module.exports = { encode, decode }
+// A função techList recebe como parâmetros um array contendo uma lista de tecnologias e uma string com um nome. Para cada tecnologia no array a função cria, em ordem alfabética, um objeto.
+// -----Exercise 2----------------------------------------------
+const techList = (technologies, userName) => {
+  if (technologies.length === 0) return 'Vazio!';
+  return technologies.sort().map((technology) => ({
+    tech: technology,
+    name: userName,
+  }));
+} 
+// ------------------------------------------------------------- 
+module.exports = { encode, decode, techList }

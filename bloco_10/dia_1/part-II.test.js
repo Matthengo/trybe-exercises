@@ -1,4 +1,4 @@
-const { encode, decode } = require('./part-II.js')
+const { encode, decode, techList } = require('./part-II.js')
 
 /* 
 Para as funções encode e decode crie os seguintes testes:
@@ -28,5 +28,41 @@ describe('encode() and decode() Functions', () => {
   test("Returned string must have the same length than passed string", () => {
     expect(encode('aeiou')).toHaveLength('aeiou'.length);
     expect(decode('12345')).toHaveLength('12345'.length);
+  });
+});
+
+describe('techList() Function', () => {
+  it('Testa se a função techList é definida', () => {
+    expect(techList).toBeDefined();
+  });
+  it('Testa se techList é uma função', () => {
+    expect(typeof techList).toBe('function');
+  });
+  it('Lista com 5 tecnologias deve retornar uma lista de objetos ordenados', () => {
+    expect(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas')).toEqual([
+      {
+        tech: 'CSS',
+        name: 'Lucas'
+      },
+      {
+        tech: 'HTML',
+        name: 'Lucas'
+      },
+      {
+        tech: 'JavaScript',
+        name: 'Lucas'
+      },
+      {
+        tech: 'Jest',
+        name: 'Lucas'
+      },
+      {
+        tech: 'React',
+        name: 'Lucas'
+      }
+    ]);
+  });
+  it('Lista com 0 tecnologias deve retornar uma mensagem de erro "Vazio!"', () => {
+    expect(techList([], 'Lucas')).toBe('Vazio!');
   });
 });
