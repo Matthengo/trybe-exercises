@@ -1,4 +1,4 @@
-const { uppercase, getUserName } = require('./exercises-day2.js');
+const { uppercase, getUserName, getRepos } = require('./exercises-day2.js');
 
 // Escreva um teste que verifique a chamada do callback de uma função uppercase , que transforma as letras de uma palavra em letras maiúsculas
 
@@ -47,3 +47,15 @@ describe('getUserName() Function with Async/Await', () => {
     }
   });
 });
+
+// O código abaixo busca no GitHub de um usuário, de acordo com a URL, seus repositórios, e retorna uma lista como resultado. Dada a URL 'https://api.github.com/orgs/tryber/repos' , faça um teste que verifique que os repositórios 'sd-01-week4-5-project-todo-list' e 'sd-01-week4-5-project-meme-generator' se encontram nessa lista.
+
+describe('getRepos() Function', () => {
+  it('should have certain items in the repository', async () => {
+    expect.assertions(2);
+    const URL = 'https://api.github.com/orgs/tryber/repos';
+    await expect(getRepos(URL)).resolves.toContain('sd-01-week4-5-project-todo-list');
+    await expect(getRepos(URL)).resolves.toContain('sd-01-week4-5-project-meme-generator');
+  });
+});
+
