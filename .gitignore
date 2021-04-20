@@ -7,3 +7,4 @@ arquivo_ignorado.txt
 !.vscode/launch.json
 *.code-workspace
 **/.vscode/
+node_modules/
