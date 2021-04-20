@@ -1,5 +1,6 @@
 // Refatorar algumas funções criadas no Projeto Playground Functions
 
+// -----Exercise 1---------------------------------------------- 
 const codeNumbers = [1, 2, 3, 4, 5];
 const codeVowels = ['a', 'e', 'i', 'o', 'u']; 
 
@@ -37,5 +38,6 @@ const encode = (stringToEncode) => {
 const decode = (stringToDecode) => {
   return codify(stringToDecode, 'decode');
 };
+// ------------------------------------------------------------- 
 
 module.exports = { encode, decode }
