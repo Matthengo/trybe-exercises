@@ -8,3 +8,4 @@ arquivo_ignorado.txt
 *.code-workspace
 **/.vscode/
 node_modules/
+annotations/
