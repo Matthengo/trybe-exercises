@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import HelloMyFriends from './components/HelloMyFriends';
+import HelloMyFriends from '../components/HelloMyFriends';
 
 const tasks = ['Bash', 'Git/Github', 'HTML', 'CSS', 'Javascript', 'Jest', 'React'];
 
