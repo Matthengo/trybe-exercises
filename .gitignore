@@ -1,11 +1,9 @@
-pasta_ignorada/
-arquivo_ignorado.txt
-
 ### Code ###
 .vscode/*
 !.vscode/tasks.json
 !.vscode/launch.json
 *.code-workspace
 **/.vscode/
+
 node_modules/
 annotations/
