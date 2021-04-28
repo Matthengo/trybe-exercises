@@ -1,4 +1,5 @@
-const pokemons = [
+/* eslint import/no-anonymous-default-export: [2, {"allowArray": true}] */
+export default [
   {
       id: 25,
       name: "Pikachu",
@@ -99,5 +100,3 @@ const pokemons = [
       moreInfo: "https://bulbapedia.bulbagarden.net/wiki/Dragonair_(Pok%C3%A9mon)"
   }
 ];
-
-export default pokemons;

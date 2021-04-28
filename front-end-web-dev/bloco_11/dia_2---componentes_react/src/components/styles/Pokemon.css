@@ -13,6 +13,10 @@
   border-radius: 25px;
   -webkit-box-shadow: 3px 3px 2px 1px #9f9f9f;
           box-shadow: 3px 3px 2px 1px #9f9f9f;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5px;
 }
 
 .Pokemon .Pokemon__info {
@@ -43,6 +47,8 @@
 .Pokemon .Pokemon__info p:nth-child(2) {
   padding: 3px 7px;
   color: #eeeeee;
+  min-width: 55px;
+  text-align: center;
 }
 
 .Pokemon .Pokemon__img {

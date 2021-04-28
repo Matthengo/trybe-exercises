@@ -16,6 +16,8 @@ $pokemon-color: (
   border: 1px solid black;
   border-radius: 25px;
   box-shadow: 3px 3px 2px 1px #9f9f9f;
+  justify-content: center;
+  margin: 5px;
   
   #{&}__info {
     display: flex;
@@ -35,6 +37,8 @@ $pokemon-color: (
       &:nth-child(2) {
         padding: 3px 7px;
         color: #eeeeee;
+        min-width: 55px;
+        text-align: center;
       }
     }
   }
