@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Pokemon";
+  src: url("//db.onlinewebfonts.com/t/a222402127a0453c817a6cf4c3d9810b.eot");
+  src: url("//db.onlinewebfonts.com/t/a222402127a0453c817a6cf4c3d9810b.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a222402127a0453c817a6cf4c3d9810b.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a222402127a0453c817a6cf4c3d9810b.woff") format("woff"), url("//db.onlinewebfonts.com/t/a222402127a0453c817a6cf4c3d9810b.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a222402127a0453c817a6cf4c3d9810b.svg#Pokemon") format("svg");
+}
+
+.Pokemon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 25px;
+  -webkit-box-shadow: 3px 3px 2px 1px #9f9f9f;
+          box-shadow: 3px 3px 2px 1px #9f9f9f;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5px;
+}
+
+.Pokemon .Pokemon__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.Pokemon .Pokemon__info p {
+  margin: 0;
+}
+
+.Pokemon .Pokemon__info p:nth-child(1) {
+  font-size: x-large;
+  font-family: 'Pokemon';
+  letter-spacing: 2px;
+}
+
+.Pokemon .Pokemon__info p:nth-child(2) {
+  padding: 3px 7px;
+  color: #eeeeee;
+  min-width: 55px;
+  text-align: center;
+}
+
+.Pokemon .Pokemon__img {
+  margin-left: 10px;
+}
+
+.type-Electric {
+  background-color: #fdb942;
+}
+
+.type-Fire {
+  background-color: #f25f29;
+}
+
+.type-Bug {
+  background-color: #9aa72f;
+}
+
+.type-Dragon {
+  background-color: #5b34e5;
+}
+
+.type-Normal {
+  background-color: #9c955f;
+}
+
+.type-Poison {
+  background-color: #972893;
+}
+
+.type-Psychic {
+  background-color: #ff2e75;
+}
+/*# sourceMappingURL=Pokemon.css.map */
