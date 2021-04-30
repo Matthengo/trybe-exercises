@@ -1,0 +1,18 @@
+@mixin add-class-type-color(){
+  $pokemon-color: (
+    Electric: #fdb942,
+    Fire: #f25f29,
+    Bug: #9aa72f,
+    Dragon: #5b34e5,
+    Normal: #9c955f,
+    Poison: #972893,
+    Psychic: #ff2e75,
+  );
+  
+  // $type = Key; $color = Value; $pokemon-color = Map;
+  @each $type, $color in $pokemon-color {
+    .type-#{$type} {
+      background-color: $color;
+    }
+  }
+}

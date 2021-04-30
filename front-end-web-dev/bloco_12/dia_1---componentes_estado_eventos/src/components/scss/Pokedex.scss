@@ -1,0 +1,19 @@
+.Pokedex {
+  display: flex;
+  flex-flow: column;
+  width: 600px;
+  align-items: center;
+  .Pokemons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  button {
+    width: 100px;
+    margin-top: 12px;
+    border: 1px solid black;
+    height: 35px;
+    font-size: 20px;
+  }
+
+}
