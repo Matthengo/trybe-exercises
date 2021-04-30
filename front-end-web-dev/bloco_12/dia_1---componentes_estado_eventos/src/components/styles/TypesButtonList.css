@@ -1,0 +1,30 @@
+.TypesButtonList {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.TypesButtonList button {
+  width: 75px;
+  margin: 5px 0;
+  border: 1px solid black;
+  height: 35px;
+  font-size: 20px;
+  background-color: orange;
+}
+
+.TypesButtonList button:nth-child(n+2) {
+  border-left: 0;
+  color: white;
+  background-color: rebeccapurple;
+  font-size: 16px;
+}
+/*# sourceMappingURL=TypesButtonList.css.map */

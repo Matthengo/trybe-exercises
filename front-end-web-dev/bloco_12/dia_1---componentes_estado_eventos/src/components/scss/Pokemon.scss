@@ -1,0 +1,44 @@
+@font-face {font-family: "Pokemon"; src: url("//db.onlinewebfonts.com/t/a222402127a0453c817a6cf4c3d9810b.eot"); src: url("//db.onlinewebfonts.com/t/a222402127a0453c817a6cf4c3d9810b.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a222402127a0453c817a6cf4c3d9810b.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a222402127a0453c817a6cf4c3d9810b.woff") format("woff"), url("//db.onlinewebfonts.com/t/a222402127a0453c817a6cf4c3d9810b.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a222402127a0453c817a6cf4c3d9810b.svg#Pokemon") format("svg"); }
+
+@import 'add-class-type-color';
+
+.Pokemon {
+  display: flex;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 25px;
+  box-shadow: 3px 3px 2px 1px #9f9f9f;
+  justify-content: center;
+  margin: 5px;
+  width: 350px;
+  
+  #{&}__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+    p {
+      margin: 0;
+
+      &:nth-child(1) {
+        font-size: x-large;
+        font-family: 'Pokemon';
+        letter-spacing: 2px;
+      }
+
+      &:nth-child(2) {
+        padding: 3px 7px;
+        color: #eeeeee;
+        min-width: 55px;
+        text-align: center;
+      }
+    }
+  }
+
+  #{&}__img {
+    margin-left: 10px;
+  }
+}
+
+@include add-class-type-color();
