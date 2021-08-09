@@ -31,9 +31,13 @@ Retorne 2 documentos da coleção bios pulando os 5 primeiros documentos.
 
 db.bios.find({}).skip(5).limit(2)
 
+------------------
+Utilizando o mongoimport , importe o arquivo books.json para a sua instância local do MongoDB e utilize a coleção books para construir as seguintes consultas
+------------------
 ---Exercicio-07---
+Retorne a quantidade de documentos da coleção books .
 
-
+db.books.find({}).count()
 
 ---Exercicio-08---
 
