@@ -45,8 +45,9 @@ Conte quantos livros existem com o status = "PUBLISH" .
 db.books.find({status: "PUBLISH"}).count()
 
 ---Exercicio-09---
+Exiba os atributos title , isbn e pageCount dos 3 primeiros livros. NÃO retorne o atributo _id .
 
-
+db.books.find({}, {title: true, isbn: true, pageCount: true, _id: false}).limit(3)
 
 ---Exercicio-10---
 
