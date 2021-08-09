@@ -40,8 +40,9 @@ Retorne a quantidade de documentos da coleção books .
 db.books.find({}).count()
 
 ---Exercicio-08---
+Conte quantos livros existem com o status = "PUBLISH" .
 
-
+db.books.find({status: "PUBLISH"}).count()
 
 ---Exercicio-09---
 
