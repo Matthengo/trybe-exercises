@@ -16,8 +16,10 @@ Retorne apenas os atributos name e birth do documento com o _id igual a 8.
 db.bios.find({_id: 8}, {name: true, birth: true, _id: false})
 
 ---Exercicio-04---
+Retorne todos os documentos em que o atributo name.first seja igual a John , utilizando o método pretty().
+(pretty só é utilizado no mongo e não no mongosh)
 
-
+db.bios.find({"name.first": "John"})
 
 ---Exercicio-05---
 
