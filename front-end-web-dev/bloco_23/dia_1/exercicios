@@ -1,12 +1,14 @@
 DB usado: https://docs.mongodb.com/manual/reference/bios-example-collection/
 
 ---Exercicio-01---
+Retorne o documento com o _id igual a 8.
 
 db.bios.find({_id: 8})
 
 ---Exercicio-02---
+Retorne o documento com o _id igual a 8, mas só exiba os atributos: _id e name.
 
-
+db.bios.find({_id: 8}, {name: true})
 
 ---Exercicio-03---
 
