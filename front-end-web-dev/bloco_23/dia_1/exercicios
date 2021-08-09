@@ -1,6 +1,8 @@
+DB usado: https://docs.mongodb.com/manual/reference/bios-example-collection/
+
 ---Exercicio-01---
 
-
+db.bios.find({_id: 8})
 
 ---Exercicio-02---
 
